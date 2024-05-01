@@ -284,3 +284,14 @@ h1, h2, h3, h4, h5, h6, a {
     justify-content: center;
     align-items: center;
 }
+
+.streaming {
+    background-color: rgb(120, 90, 180);
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    margin-left: 60px;
+    margin-top: 70px;
+    z-index: 2;
+}
