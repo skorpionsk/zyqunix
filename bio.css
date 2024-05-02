@@ -9,6 +9,10 @@ body {
 
 .video {
     position: absolute;
+    flex: auto;
+    width: 100%;
+    margin-top: -69px;
+    transform: scale(1.009);
 }
 
 .yt, .ghub, .guns, .ig, .x, .outerSite {
