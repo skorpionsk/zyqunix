@@ -240,6 +240,10 @@ h1, h2, h3, h4, h5, h6, a {
     position: absolute;
 }
 
+.dcNameMain {
+    margin-top: -4px;
+}
+
 .dcPFP {
     position: absolute;
     width: 72px;
@@ -252,11 +256,11 @@ h1, h2, h3, h4, h5, h6, a {
 
 .activityIMG {
     position: absolute;
-    width: 72px;
+    width: 75px;
     border-radius: 10px;
     margin-left: 57%;
-    transform: translate(90%, -50%);
-    margin-top: 50px;
+    transform: translate(80%);
+    margin-top: 7.5px;
 }
 
 .activityNames {
@@ -280,7 +284,7 @@ h1, h2, h3, h4, h5, h6, a {
 .dcBadge1 {
     position: absolute;
     margin-left: 48%;
-    transform: translateY(75%);
+    margin-top: 17px;
     width: 22px;
 }
 
@@ -298,4 +302,32 @@ h1, h2, h3, h4, h5, h6, a {
     margin-left: 60px;
     margin-top: 70px;
     z-index: 2;
+}
+
+.activityIMGtooltip {
+    width: 150px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 5px;
+    background-color:rgba(104, 104, 104, 0.9);
+    border: 2px solid rgb(137, 137, 137);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    text-align: center;
+    margin-left: 62.5%;
+    margin-top: -30px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.tooltipIMG:hover .activityIMGtooltip {
+    opacity: 1;
+    transition: 0.3s;
+    pointer-events: all;
+}
+
+.tooltipIMG:not(:hover) .activityIMGtooltip {
+    opacity: 0;
+    transition: 0.3s;
+    transition-delay: 0.2s;
 }
