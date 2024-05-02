@@ -1,2 +1,2 @@
-whoever steals this, sucks mad ...
+whoever steals this, sucks mad ...,
 give me credit at least
