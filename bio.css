@@ -318,12 +318,14 @@ h1, h2, h3, h4, h5, h6, a {
     margin-top: -30px;
     opacity: 0;
     pointer-events: none;
+    transform: scale(0.75);
 }
 
 .tooltipIMG:hover .activityIMGtooltip {
     opacity: 1;
-    transition: 0.3s;
+    transition: 0.2s;
     pointer-events: all;
+    transform: scale(1);
 }
 
 .tooltipIMG:not(:hover) .activityIMGtooltip {
