@@ -71,9 +71,11 @@ h1, h2, h3, h4, h5, h6, a {
 .desc {
     width: 100%;
     margin-top: 190px;
-    margin-left: 25%;
     position: fixed;
     text-align: center;
+
+    font-size: larger;
+    color: white;
 }
 
 .yti:not(:hover), .ghubi:not(:hover), .gunsi:not(:hover), .xi:not(:hover), .igi:not(:hover), .button:not(:hover), .outerSiteIMG:not(:hover) {
@@ -88,8 +90,13 @@ h1, h2, h3, h4, h5, h6, a {
     -webkit-user-drag: none;
 }
 
-.yt, .ghub, .guns, .ig {
+.yt, .ghub, .guns, .ig, .outerSite {
+    pointer-events: none;
     -webkit-user-drag: none;
+}
+
+.yti, .ghubi, .gunsi, .xi, .igi, .outerSiteIMG {
+    pointer-events: all;
 }
 
 .myInput, .inputEthereum, .inputLitecoin {
