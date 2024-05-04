@@ -112,7 +112,11 @@
             <button id="Litecoin" class="Litecoin" onclick="copyLTC()">
                 <img class="ltIMG" src="icons/litecoin.png" width="36">
             </button>
-            
+
+            <input class="inputMonero" id="inputMonero" type="text" value="49MYsn5xzdzAiduFwZQ54v8FGeZR9uqLUY7hywfYLURo3qUCDPSX5QifCSnWpENARodqrAWu8tt974d8kzf3RFqkKQStLXU">
+            <button id="Monero" class="Monero" onclick="copyXMR()">
+                <img class="mnIMG" src="icons/monero.png" width="36">
+            </button>            
 
         </div>
     </div>
@@ -134,7 +138,7 @@
 
     <script>
 
-        const texts = ["Amateur Programmer", "Send Crypto","Fucking thots", "Give me $2 in crypto and this yours", "Liking toes is weird asf", "Sub to my YT", "Gay son or thot daughter?", "Fuck OF models"];
+        const texts = ["Amateur Programmer", "Donate Crypto!", "Fucking thots", "Give me $2 in crypto and this yours", "Liking toes is weird asf", "Sub to my YT", "Gay son or thot daughter?", "Fuck OF models"];
         let textIndex = 0;
         let charIndex = 0;
         let isDeleting = false;
@@ -253,6 +257,24 @@
             copyLTC.setSelectionRange(0, 9999);
 
             navigator.clipboard.writeText(copyLTC.value);
+
+            let copiedAlert = document.getElementById('copiedAlert')
+            
+            copiedAlert.style.marginTop = '10px';
+            
+            setTimeout(function() {
+                copiedAlert.style.marginTop = '-100px';
+            }, 2000);
+        };
+
+        function copyXMR() {
+            var copyXMR = document.getElementById("inputMonero");
+
+
+            copyXMR.select();
+            copyXMR.setSelectionRange(0, 9999);
+
+            navigator.clipboard.writeText(copyXMR.value);
 
             let copiedAlert = document.getElementById('copiedAlert')
             
