@@ -125,7 +125,7 @@
         <div class="userPage_clickToEnterText__pAALW" id="userPage_clickToEnterText__pAALW" style="font-weight:700;font-size:32px">[click]</div>
     </div>
 
-    <div class="copiedAlert" id="copiedAlert">Copied!</div>
+    <div class="copiedAlert" id="copiedAlert">╧ Copied! ╧</div>
 
     <!--
 
@@ -140,33 +140,65 @@
         let textIndex = 0;
         let charIndex = 0;
         let isDeleting = false;
+        let typingSpeed = 150; // Typing speed in milliseconds
+        let deleteSpeed = 100; // Deleting speed in milliseconds
+        let delayBeforeDelete = 3000; // Delay before deleting in milliseconds
+        let blinkSpeed = 50; // Blinking speed in milliseconds
 
         function typeWriter() {
             const currentText = texts[textIndex];
+            let textToShow = '';
+
             if (isDeleting) {
-                document.getElementById("desc").textContent = currentText.substring(0, charIndex - 1);
+                textToShow = currentText.substring(0, charIndex - 1);
                 charIndex--;
             } else {
-                document.getElementById("desc").textContent = currentText.substring(0, charIndex + 1);
+                textToShow = currentText.substring(0, charIndex + 1);
                 charIndex++;
             }
 
+            // Add a typewriter line when typing
+            if (!isDeleting && charIndex < currentText.length) {
+                textToShow += "<span id='typewriter-line'>|</span>"; // Typewriter line
+            }
+
+            document.getElementById("desc").innerHTML = textToShow;
+
             if (!isDeleting && charIndex === currentText.length + 1) {
                 isDeleting = true;
-                setTimeout(typeWriter, 1500); // Delay before deleting
+                setTimeout(typeWriter, delayBeforeDelete); // Delay before deleting
             } else if (isDeleting && charIndex === 0) {
                 isDeleting = false;
                 textIndex = (textIndex + 1) % texts.length;
                 setTimeout(typeWriter, 1000); // Delay before typing next text
             } else {
-                setTimeout(typeWriter, 100); // Typing speed
+                setTimeout(typeWriter, isDeleting ? deleteSpeed : typingSpeed); // Typing or deleting speed
             }
         }
+
+        let opacity = 0;
+        let direction = 1;
+
+        setInterval(() => {
+            const typewriterLine = document.getElementById("typewriter-line");
+            if (typewriterLine) {
+                typewriterLine.style.opacity = opacity;
+                opacity += 0.1 * direction;
+                if (opacity <= 0 || opacity >= 1) {
+                    direction *= -1;
+                }
+            }
+        }, 50);
+
+
+
+
+
 
 
         
         let video = document.getElementById('video')
-        video.volume = '0.5';
+        video.volume = '0.4';
 
         let clickToEnterOverlay = document.getElementById('userPage_clickToEnterOverlay__4kIhx');
         let userPage_clickToEnterText__pAALW = document.getElementById('userPage_clickToEnterText__pAALW');
