@@ -214,6 +214,9 @@
 
 
         ///////////////////////////////////
+
+        let copiedAlert = document.getElementById('copiedAlert')
+
         function copyBTC() {
             var copyBTC = document.getElementById("myInput");
 
@@ -222,12 +225,11 @@
 
             navigator.clipboard.writeText(copyBTC.value);
 
-            let copiedAlert = document.getElementById('copiedAlert')
-            
             copiedAlert.style.marginTop = '10px';
             
             setTimeout(function() {
                 copiedAlert.style.marginTop = '-100px';
+                copiedAlert.style.transition = '0.25s'
             }, 2000);
         };
 
@@ -239,13 +241,12 @@
             copyEth.setSelectionRange(0, 9999);
 
             navigator.clipboard.writeText(copyEth.value);
-
-            let copiedAlert = document.getElementById('copiedAlert')
             
             copiedAlert.style.marginTop = '10px';
             
             setTimeout(function() {
                 copiedAlert.style.marginTop = '-100px';
+                copiedAlert.style.transition = '0.25s'
             }, 2000);
         };
 
@@ -258,12 +259,11 @@
 
             navigator.clipboard.writeText(copyLTC.value);
 
-            let copiedAlert = document.getElementById('copiedAlert')
-            
             copiedAlert.style.marginTop = '10px';
             
             setTimeout(function() {
                 copiedAlert.style.marginTop = '-100px';
+                copiedAlert.style.transition = '0.25s'
             }, 2000);
         };
 
@@ -276,12 +276,11 @@
 
             navigator.clipboard.writeText(copyXMR.value);
 
-            let copiedAlert = document.getElementById('copiedAlert')
-            
             copiedAlert.style.marginTop = '10px';
             
             setTimeout(function() {
                 copiedAlert.style.marginTop = '-100px';
+                copiedAlert.style.transition = '0.25s'
             }, 2000);
         };
 
