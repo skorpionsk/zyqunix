@@ -121,8 +121,6 @@
         </div>
     </div>
         
-    <iframe class="iframe" src="silence.mp3" allow="autoplay" id="audio" style="display: none"></iframe>
-
     <div class="userPage_clickToEnterOverlay__4kIhx" id="userPage_clickToEnterOverlay__4kIhx">
         <div class="userPage_clickToEnterText__pAALW" id="userPage_clickToEnterText__pAALW" style="font-weight:700;font-size:32px">[click]</div>
     </div>
@@ -205,9 +203,8 @@
                 clickToEnterOverlay.style.opacity = '0';
                 clickToEnterOverlay.style.zIndex = '-9999';
 
-                main.style.transition = "1s"; // Set transition before changing opacity and transform
-                main.style.transitionDelay = "0.2s";
                 main.style.opacity = "1";
+                main.style.transition = "0.9s";
                 main.style.transform = "translate(-50%, 0%)"; // Use transform for translation
 
                 video.play();
