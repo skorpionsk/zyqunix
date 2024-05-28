@@ -1,5 +1,6 @@
 body {
-    overflow: hidden;
+    overflow-y: hidden;
+    overflow-x: scroll;
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
     -webkit-user-drag: none;
     margin: 0;
